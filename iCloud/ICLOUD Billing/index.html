@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./js/index.js" defer></script>
+   <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="./assets/appleFavicon.png" type="image/x-icon">
+    <title>Icloud clone</title>
+  </head>
+
+<body class="h-screen">
+    <div class="w-full h-full flex flex-col justify-between bg-[#DCDCDF]"> 
+          <header class="mb-4 bg-transparent ">
+              <div class="w-full flex flex-row justify-between p-4">
+                  <div class="flex flex-row gap-1 items-center">
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1.5em" width="1.5em" xmlns="http://www.w3.org/2000/svg"><path d="M747.4 535.7c-.4-68.2 30.5-119.6 92.9-157.5-34.9-50-87.7-77.5-157.3-82.8-65.9-5.2-138 38.4-164.4 38.4-27.9 0-91.7-36.6-141.9-36.6C273.1 298.8 163 379.8 163 544.6c0 48.7 8.9 99 26.7 150.8 23.8 68.2 109.6 235.3 199.1 232.6 46.8-1.1 79.9-33.2 140.8-33.2 59.1 0 89.7 33.2 141.9 33.2 90.3-1.3 167.9-153.2 190.5-221.6-121.1-57.1-114.6-167.2-114.6-170.7zm-105.1-305c50.7-60.2 46.1-115 44.6-134.7-44.8 2.6-96.6 30.5-126.1 64.8-32.5 36.8-51.6 82.3-47.5 133.6 48.4 3.7 92.6-21.2 129-63.7z"></path></svg>
+                    <h2 class="text-black font-semibold">iCloud</h2>
+                  </div>
+                  <svg class="cursor-pointer" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 9.5a1.5 1.5 0 110-3 1.5 1.5 0 010 3zm5 0a1.5 1.5 0 110-3 1.5 1.5 0 010 3zm5 0a1.5 1.5 0 110-3 1.5 1.5 0 010 3z" clip-rule="evenodd"></path></svg>
+              </div>
+          </header>
+          <main class="bg-[#DCDCDF] flex items-center flex-row justify-center">
+              <div class="shadhow-lg bg-[#FEFEFE] my-10 mx-4 rounded-lg rounded-lg">
+                  <div class="flex flex-col overflow-y-scroll ] ">
+                     <div class="w-full flex flex-col  p-2 pb-5 border-b-2 bg-[#EFF0F1] gap-1 px-4">
+                        <svg class="md:block hidden" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1.8em" width="1.8em" xmlns="http://www.w3.org/2000/svg"><path d="M747.4 535.7c-.4-68.2 30.5-119.6 92.9-157.5-34.9-50-87.7-77.5-157.3-82.8-65.9-5.2-138 38.4-164.4 38.4-27.9 0-91.7-36.6-141.9-36.6C273.1 298.8 163 379.8 163 544.6c0 48.7 8.9 99 26.7 150.8 23.8 68.2 109.6 235.3 199.1 232.6 46.8-1.1 79.9-33.2 140.8-33.2 59.1 0 89.7 33.2 141.9 33.2 90.3-1.3 167.9-153.2 190.5-221.6-121.1-57.1-114.6-167.2-114.6-170.7zm-105.1-305c50.7-60.2 46.1-115 44.6-134.7-44.8 2.6-96.6 30.5-126.1 64.8-32.5 36.8-51.6 82.3-47.5 133.6 48.4 3.7 92.6-21.2 129-63.7z"></path></svg>
+                        <h1 class="mx-auto text-center font-semibold text-3xl">Create Your Apple ID </h1>
+                     </div>
+                     <div class="text-center max-w-lg mx-10 mt-4">
+                        <p>One Apple ID is all you need to access all Apple services.
+                           Already have an Apple ID? <a class="text-blue-600" href="#">Sign In ></a> </p>
+                     </div>
+                     <div class="md:mx-10 mx-6">
+                        <form action="" class="space-y-2 mt-5 " id="myForm">
+                        <div class="grid gap-6">
+                           <div>
+                              <div class="grid md:gap-4 gap-0 mb-2 md:grid-cols-2">
+                              <div class="mb-4">
+                                 <label for="expiry-date" class="block mb-2 text-sm font-medium text-gray-900">First Name</label>
+                                 <div class="relative flex items-center border rounded-lg"> 
+                                    <input type="text" id="first-name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg outline-none block w-full p-2.5 "  required>
+                                 </div>
+                              </div>
+                              <div>
+                                 <label for="cvc" class="block mb-2 text-sm font-medium text-gray-900 ">Last Name</label>
+                                 <div class="relative flex items-center rounded-lg">
+                                    <input type="text" id="last-name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg outline-none block w-full p-2.5" maxlength="4" required>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="mb-4">
+                              <label for="cardholder-name" class="block mb-2 text-sm font-medium text-gray-900">Email</label>
+                              <div class="relative flex items-center border rounded-lg">
+                                 <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg outline-none block w-full p-2.5 "  required>
+                              </div>
+                           </div>
+                           
+                              <div class="mb-4">
+                                 <label for="cardholder-name" class="block mb-2 text-sm font-medium text-gray-900">Cardholder's name</label>
+                                 <div class="relative flex items-center border rounded-lg">
+                                    <input type="text" id="cardholder-name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg outline-none block w-full p-2.5 "  required>
+                                 </div>
+                              </div>
+                              <div class="mb-4">
+                                 <label for="card-number" class="block mb-2 text-sm font-medium text-gray-900 ">Card Number</label>
+                                 <div class="relative flex items-center border rounded-lg">
+                                    <img src="./assets//card-holder.png" id="card-image" class="absolute self-center left-3 w-7 text-center top-1/2 transform -translate-y-1/2 flex flex-row justify-center" alt="">    
+                                    <input type="number" id="card-number" maxlength="16" class="pl-12 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg outline-none block w-full p-2.5 " required>
+                                 </div>
+                              </div>
+                              <div class="grid md:gap-4 gap-0 mb-4 md:grid-cols-2">
+                                 <div class="mb-4">
+                                    <label for="expiry-date" class="block mb-2 text-sm font-medium text-gray-900">Expiry date (MM/YY)</label>
+                                    <div class="relative flex items-center border rounded-lg"> 
+                                       <input type="text" id="expiry-date" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg outline-none block w-full p-2.5 "  required>
+                                    </div>
+                                 </div>
+                                 <div>
+                                    <label for="cvc" class="block mb-2 text-sm font-medium text-gray-900 ">CVC</label>
+                                    <div class="relative flex items-center rounded-lg">
+                                       <input type="text" id="cvc" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg outline-none block w-full p-2.5" maxlength="4" required>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </form>
+                     </div>
+                  </div>
+                  <div class=" p-4 flex flex-row justify-end gap-2 bg-[#F7F7F7] border-t border-gray-400">
+                     <button class="text-blue-500 border rounded-md shadow-inner py-2 px-3 bg-gradient-to-b from-[#fff] to-[#eee] border-[#d9d9d9]">Cancel</button>
+                     <button class="text-white border rounded-md shadow-inner py-2 px-3  bg-gradient-to-b from-[#51a9ee] to-[#147bcd] border-[#d9d9d9]">Continue</button>
+                  </div>              
+              </div>
+          </main>
+          <!--Footer-->
+        <footer class=" flex md:flex-row flex-col md:text-none text-center gap-2 md:justify-around justify-center items-center p-5 bg-[#F5F5F7]">
+        <div class="flex md:flex-row flex-col md:gap-3 gap-1">
+            <div class="md:border-r border-0 border-gray-300 px-2 text-[12px]">
+            <p>system status</p>
+            </div>
+            <div class="md:border-r border-0 border-gray-300 px-2 text-[12px]">
+            <p>confidentiality agreement</p>
+            </div>
+            <p class="text-[12px]">general conditions</p>
+        </div>
+        <div class="text-[12px]">
+            <p>Copyright © 2023 Apple Inc. All rights reserved</p>
+        </div>
+        </footer>
+    </div>
+  </body>
+</html>
